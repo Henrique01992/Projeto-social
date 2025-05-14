@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Importante para o cálculo correto das dimensões */
 }
 
 html, body {
@@ -13,20 +14,20 @@ html, body {
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh; /* Garante que o main ocupe pelo menos a altura da tela */
     position: relative;
-   background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
-   background-size: cover;
-   background-attachment: fixed;
-  
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex; /* Usaremos flexbox para controlar o layout em telas maiores */
 }
 
 section#telefone {
+    /* Mantemos o posicionamento para telas maiores */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     height: 627px;
     width: 311px;
     background: url('../imagens/frame-iphone.png') no-repeat ;
@@ -39,23 +40,70 @@ iframe#tela {
     width: 267px;
     height: 471px;
 }
-section#redes-sociais
-{
-    text-align: right;
+
+section#redes-sociais {
+    text-align:right;
+    padding-left: 40px; 
+    padding-top: 10px;
+    
 }
+
 section#redes-sociais img {
-    width: 50px;
-    margin: 10px;
+    width: 60px;
+    margin:10px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.400);
-    box-sizing: border-box;
-
+    display: block; /* Faz com que cada imagem ocupe uma linha */
 }
-section#redes-sociais img:hover 
 
-{
-          border: 2px solid rgba(255,255,255,0.637);
-          transform: translate(-3px,-3px);
-          box-shadow: 5px 5px 10px black;
-          transition: transform .3s, border 1s;
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255,255,255,0.637);
+    transform: translate(-3px,-3px);
+    box-shadow: 5px 5px 10px black;
+    transition: transform .3s, border 1s;
+}
+
+/* Media Query para telas com largura máxima de 768px (tamanho típico de tablets e alguns celulares) */
+@media (max-width: 768px) {
+    main {
+        flex-direction:row; /* Empilha os elementos verticalmente */
+        align-items:center; /* Centraliza os itens na horizontal */
+    }
+
+    section#telefone {
+        position: static; /* Remove o posicionamento absoluto */
+        transform: translate(0, 0); /* Remove a transformação de centralização */
+        margin: auto; /* Adiciona margem superior e inferior e centraliza horizontalmente */
+    }
+
+    section#redes-sociais {
+        text-align: center; /* Centraliza os botões */
+
+        padding-top: 20px;
+    }
+
+    section#redes-sociais img {
+        display: inline-block; /* Permite que as imagens fiquem lado a lado */
+        margin: 10px;
+    }
+}
+
+/* Media Query para telas ainda menores (celulares menores) */
+@media (max-width: 480px) {
+    section#telefone {
+        width: 90%; /* Reduz a largura do "telefone" em telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    iframe#tela {
+        top: 60px; /* Ajusta o posicionamento do iframe dentro do "telefone" */
+        left: 10px;
+        width: calc(100% - 20px); /* Faz o iframe ocupar a largura restante */
+        height: 350px; /* Reduz a altura do iframe */
+    }
+
+    section#redes-sociais img {
+        width: 40px; /* Reduz o tamanho dos ícones */
+        margin: 8px;
+    }
 }
