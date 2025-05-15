@@ -90,15 +90,15 @@ section#redes-sociais img:hover {
 /* Media Query para telas ainda menores (celulares menores) */
 @media (max-width: 480px) {
     section#telefone {
-        width: 85%; /* Reduz a largura do "telefone" em telas menores */
+        width: 90%; /* Reduz a largura do "telefone" em telas menores */
          /* Ajusta a altura automaticamente */
     }
 
     iframe#tela {
         
         left: 10px;
-        width: calc(100% - 40px);
-        height: 90%;
+        width: calc(100% - 30px);
+        height: 60%;
         
     }
 
