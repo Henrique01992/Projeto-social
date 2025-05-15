@@ -95,14 +95,14 @@ section#redes-sociais img:hover {
     }
 
     iframe#tela {
-         /* Ajusta o posicionamento do iframe dentro do "telefone" */
+        
         left: 10px;
-        width: calc(100% - 20px); /* Faz o iframe ocupar a largura restante */
+        width: calc(100% - 30px); /* Faz o iframe ocupar a largura restante */
          /* Reduz a altura do iframe */
     }
 
     section#redes-sociais img {
-        width: 10px; /* Reduz o tamanho dos ícones */
+        width: 20px; /* Reduz o tamanho dos ícones */
         margin: 8px;
     }
 }
