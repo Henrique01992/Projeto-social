@@ -91,14 +91,14 @@ section#redes-sociais img:hover {
 @media (max-width: 480px) {
     section#telefone {
         width: 90%; /* Reduz a largura do "telefone" em telas menores */
-        height: auto; /* Ajusta a altura automaticamente */
+         /* Ajusta a altura automaticamente */
     }
 
     iframe#tela {
-        top: 60px; /* Ajusta o posicionamento do iframe dentro do "telefone" */
+         /* Ajusta o posicionamento do iframe dentro do "telefone" */
         left: 10px;
         width: calc(100% - 20px); /* Faz o iframe ocupar a largura restante */
-        height: 350px; /* Reduz a altura do iframe */
+         /* Reduz a altura do iframe */
     }
 
     section#redes-sociais img {
