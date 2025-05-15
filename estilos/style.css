@@ -96,8 +96,8 @@ section#redes-sociais img:hover {
 
     iframe#tela {
         
-        left:8px;
-        width: calc(100% - 36px);
+        
+        width: calc(100% - 35px);
         height: 75%;
         
     }
