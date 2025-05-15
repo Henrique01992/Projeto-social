@@ -78,7 +78,6 @@ section#redes-sociais img:hover {
 
     section#redes-sociais {
         text-align: center; /* Centraliza os botões */
-
         padding-top: 20px;
     }
 
@@ -91,19 +90,19 @@ section#redes-sociais img:hover {
 /* Media Query para telas ainda menores (celulares menores) */
 @media (max-width: 480px) {
     section#telefone {
-        width: 70%; /* Reduz a largura do "telefone" em telas menores */
+        width: 90%; /* Reduz a largura do "telefone" em telas menores */
         height: auto; /* Ajusta a altura automaticamente */
     }
 
     iframe#tela {
-        top: 40px; /* Ajusta o posicionamento do iframe dentro do "telefone" */
+        top: 60px; /* Ajusta o posicionamento do iframe dentro do "telefone" */
         left: 10px;
         width: calc(100% - 20px); /* Faz o iframe ocupar a largura restante */
         height: 350px; /* Reduz a altura do iframe */
     }
 
     section#redes-sociais img {
-        width: 30px; /* Reduz o tamanho dos ícones */
+        width: 40px; /* Reduz o tamanho dos ícones */
         margin: 8px;
     }
 }
