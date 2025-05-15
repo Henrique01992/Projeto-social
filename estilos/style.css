@@ -102,7 +102,7 @@ section#redes-sociais img:hover {
     }
 
     section#redes-sociais img {
-        width: 40px; /* Reduz o tamanho dos ícones */
+        width: 10px; /* Reduz o tamanho dos ícones */
         margin: 8px;
     }
 }
