@@ -97,13 +97,14 @@ section#redes-sociais img:hover {
     iframe#tela {
         
         left:10px;
-        width: calc(100% - 35px);
+        width: calc(100% - 37px);
         height: 76%;
         
     }
 
     section#redes-sociais img {
         width: 30px; 
-        margin: 8px;
+        margin-top: 15px;
+        margin-left: 18px;
     }
 }
